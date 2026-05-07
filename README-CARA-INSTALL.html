@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panduan Install — GH Crop Advisory</title>
+<style>
+  body{font-family:system-ui,sans-serif;max-width:720px;margin:0 auto;padding:24px 16px;background:#f8f4ec;color:#1a1a2e;}
+  h1{font-size:26px;color:#1a3a2a;border-bottom:3px solid #40916c;padding-bottom:10px;}
+  h2{font-size:18px;color:#2d6a4f;margin-top:28px;}
+  h3{font-size:15px;color:#1a3a2a;margin-top:18px;}
+  .step{background:#fff;border-radius:12px;border:1px solid #b7e4c7;padding:16px 18px;margin-bottom:14px;}
+  .step-num{display:inline-block;background:#40916c;color:#fff;border-radius:50%;width:26px;height:26px;text-align:center;line-height:26px;font-weight:700;font-size:13px;margin-right:8px;}
+  .tag{display:inline-block;padding:2px 10px;border-radius:10px;font-size:12px;font-weight:700;}
+  .tag-free{background:#d8f3dc;color:#2d6a4f;}
+  .tag-paid{background:#fff8e1;color:#b45309;}
+  .tag-android{background:#e3f2fd;color:#1565c0;}
+  .tag-ios{background:#f3e5f5;color:#6a1b9a;}
+  code{background:#e8f5e9;border-radius:5px;padding:2px 7px;font-size:13px;color:#1a3a2a;font-family:monospace;}
+  .warn{background:#fffbf0;border:1.5px solid #fcd34d;border-radius:10px;padding:12px 16px;margin:14px 0;font-size:13.5px;}
+  .ok{background:#d8f3dc;border:1.5px solid #b7e4c7;border-radius:10px;padding:12px 16px;margin:14px 0;font-size:13.5px;}
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  th{background:#1a3a2a;color:#fff;padding:8px 10px;text-align:left;}
+  td{padding:8px 10px;border-bottom:1px solid #b7e4c7;}
+  tr:last-child td{border-bottom:none;}
+  a{color:#2d6a4f;}
+</style>
+</head>
+<body>
+
+<h1>🍈 Panduan Install GH Crop Advisory ke HP</h1>
+<p>File ini menjelaskan cara menginstall aplikasi Greenhouse Crop Advisory ke HP Android dan iPhone/iPad tanpa App Store.</p>
+
+<div class="ok">✅ <strong>Kabar baik:</strong> Aplikasi ini adalah PWA (Progressive Web App) — bisa diinstall langsung dari browser, <strong>GRATIS</strong>, tanpa perlu Google Play Store atau App Store.</div>
+
+<!-- ====================================================== -->
+<h2>LANGKAH 1 — Upload File ke Hosting</h2>
+<p>Sebelum bisa diinstall di HP, file aplikasi harus diunggah ke internet (hosting). Pilih salah satu cara di bawah:</p>
+
+<div class="step">
+  <span class="step-num">A</span> <strong>Netlify</strong> <span class="tag tag-free">GRATIS</span> <span class="tag tag-android">Android</span> <span class="tag tag-ios">iOS</span> — <em>Paling mudah, direkomendasikan</em>
+  <ol style="margin-top:12px;padding-left:18px;line-height:2;">
+    <li>Buka <a href="https://netlify.com" target="_blank">netlify.com</a> → klik <strong>Sign up</strong> (gratis dengan email atau GitHub)</li>
+    <li>Setelah login, di halaman utama ada kotak besar: <em>"Drag and drop your site folder here"</em></li>
+    <li>Buka folder <code>sadaya-deploy</code> di komputer Anda</li>
+    <li><strong>Drag seluruh folder</strong> dan drop ke kotak Netlify tersebut</li>
+    <li>Tunggu 30–60 detik → Netlify memberi URL seperti: <code>https://random-name-xyz.netlify.app</code></li>
+    <li>URL ini adalah alamat aplikasi Anda — bagikan ke seluruh tim!</li>
+  </ol>
+</div>
+
+<div class="step">
+  <span class="step-num">B</span> <strong>GitHub Pages</strong> <span class="tag tag-free">GRATIS</span> — Cocok jika sudah punya akun GitHub
+  <ol style="margin-top:12px;padding-left:18px;line-height:2;">
+    <li>Buat akun di <a href="https://github.com" target="_blank">github.com</a></li>
+    <li>Klik <strong>New repository</strong> → nama: <code>gh-crop-advisory</code> → Public → Create</li>
+    <li>Upload semua file dari folder <code>sadaya-deploy</code> (klik "uploading an existing file")</li>
+    <li>Masuk ke <strong>Settings → Pages → Source: Deploy from branch → main → Save</strong></li>
+    <li>URL: <code>https://[username].github.io/gh-crop-advisory</code></li>
+  </ol>
+</div>
+
+<div class="step">
+  <span class="step-num">C</span> <strong>cPanel / Shared Hosting</strong> (jika sudah punya domain & hosting)
+  <ol style="margin-top:12px;padding-left:18px;line-height:2;">
+    <li>Login ke cPanel → <strong>File Manager</strong></li>
+    <li>Masuk ke folder <code>public_html</code></li>
+    <li>Upload semua file dan folder dari <code>sadaya-deploy</code></li>
+    <li>Pastikan hosting mendukung <strong>HTTPS</strong> (SSL aktif) — wajib untuk PWA</li>
+    <li>Akses di: <code>https://domain-anda.com</code></li>
+  </ol>
+</div>
+
+<!-- ====================================================== -->
+<h2>LANGKAH 2 — Install di HP Android 📱</h2>
+
+<div class="step">
+  <span class="step-num">1</span> Buka <strong>Chrome</strong> di HP Android (bukan Samsung Browser atau Firefox)
+</div>
+<div class="step">
+  <span class="step-num">2</span> Ketik URL aplikasi Anda (dari Netlify/GitHub Pages) di address bar → Enter
+</div>
+<div class="step">
+  <span class="step-num">3</span> Tunggu 5–10 detik → akan muncul banner di bawah layar: <strong>"Tambahkan GH Crop Advisory ke layar utama"</strong>
+</div>
+<div class="step">
+  <span class="step-num">4</span> Ketuk <strong>Install</strong> atau <strong>Tambahkan</strong> → Konfirmasi → selesai!
+</div>
+
+<div class="warn">⚠️ <strong>Jika banner tidak muncul otomatis:</strong><br>
+Ketuk ⋮ (tiga titik) pojok kanan atas Chrome → pilih <strong>"Tambahkan ke layar utama"</strong> atau <strong>"Install app"</strong></div>
+
+<!-- ====================================================== -->
+<h2>LANGKAH 3 — Install di iPhone / iPad 🍎</h2>
+
+<div class="warn">⚠️ <strong>Wajib gunakan Safari!</strong> Chrome di iPhone tidak mendukung install PWA.</div>
+
+<div class="step">
+  <span class="step-num">1</span> Buka <strong>Safari</strong> di iPhone/iPad (bukan Chrome atau aplikasi browser lain)
+</div>
+<div class="step">
+  <span class="step-num">2</span> Ketik URL aplikasi di address bar → Enter
+</div>
+<div class="step">
+  <span class="step-num">3</span> Ketuk ikon <strong>Bagikan</strong> (kotak dengan panah ke atas ↑) — ada di bagian tengah bawah layar
+</div>
+<div class="step">
+  <span class="step-num">4</span> Scroll ke bawah di menu yang muncul → pilih <strong>"Tambahkan ke Layar Utama" (Add to Home Screen)</strong>
+</div>
+<div class="step">
+  <span class="step-num">5</span> Konfirmasi nama <strong>"GH Crop Advisory"</strong> → Ketuk <strong>Tambahkan</strong> → selesai!
+</div>
+
+<!-- ====================================================== -->
+<h2>LANGKAH 4 — Bagikan URL ke Seluruh Tim</h2>
+<p>Setelah hosting aktif, bagikan URL ke semua anggota tim melalui WhatsApp. Setiap orang bisa install sendiri di HP masing-masing dengan langkah di atas.</p>
+
+<div class="ok">
+  📲 Contoh pesan WhatsApp:<br><br>
+  <em>"Halo tim, silakan install aplikasi Greenhouse Crop Advisory di HP masing-masing:<br>
+  👉 [URL NETLIFY ANDA]<br>
+  Android: buka di Chrome → ketuk Install<br>
+  iPhone: buka di Safari → Bagikan → Tambahkan ke Layar Utama"</em>
+</div>
+
+<!-- ====================================================== -->
+<h2>Perbandingan Opsi Deploy</h2>
+<table>
+  <thead><tr><th>Platform</th><th>Biaya</th><th>Kemudahan</th><th>Android</th><th>iOS</th><th>Custom Domain</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Netlify</strong></td><td>Gratis</td><td>⭐⭐⭐⭐⭐</td><td>✅</td><td>✅</td><td>✅ (gratis subdomain)</td></tr>
+    <tr><td>GitHub Pages</td><td>Gratis</td><td>⭐⭐⭐⭐</td><td>✅</td><td>✅</td><td>✅</td></tr>
+    <tr><td>cPanel/Hosting</td><td>Sesuai paket</td><td>⭐⭐⭐</td><td>✅</td><td>✅</td><td>✅</td></tr>
+  </tbody>
+</table>
+
+<!-- ====================================================== -->
+<h2>Struktur File yang Harus Diupload</h2>
+<pre style="background:#1a3a2a;color:#d8f3dc;border-radius:10px;padding:16px;font-size:13px;overflow-x:auto;">
+sadaya-deploy/
+├── index.html          ← Aplikasi utama
+├── manifest.json       ← Konfigurasi PWA
+├── sw.js               ← Service worker (offline)
+├── netlify.toml        ← Konfigurasi Netlify (auto)
+├── .htaccess           ← Konfigurasi Apache/cPanel (auto)
+└── icons/
+    ├── icon-72.png
+    ├── icon-96.png
+    ├── icon-128.png
+    ├── icon-144.png
+    ├── icon-152.png
+    ├── icon-180.png
+    ├── icon-192.png
+    ├── icon-384.png
+    ├── icon-512.png
+    ├── icon-maskable-192.png
+    └── icon-maskable-512.png
+</pre>
+
+<hr style="margin:28px 0;border-color:#b7e4c7;">
+<p style="font-size:12px;color:#6b6b8a;text-align:center;">Greenhouse Crop Advisory System · Budidaya Melon GH A–F</p>
+</body>
+</html>
